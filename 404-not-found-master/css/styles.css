@@ -1,0 +1,213 @@
+/* ******************* Reset Fluid******************* */
+
+/* @link https://utopia.fyi/type/calculator*/
+
+:root {
+    --step-h1: clamp(3rem, 2.65rem + 1.5vw, 4rem);
+    --step-p: clamp(1.13rem, 0.99rem + 0.56vw, 1.5rem);
+}
+
+/* ******************* Reset Custom Properties ****************** */
+
+:root {
+    --main-font: "Space Mono", sans-serif;
+    --second-font: "Inconsolata", sans-serif;
+    --footer-font: "Montserrat", sans-serif;
+    --main-color: #333;
+    --second-color: #4f4f4f;
+    --footer-color: #bdbdbd;
+    --white-color: #fff;
+    --margin-24: 1.5rem;
+    --max-width: 1440px;
+}
+
+html,
+body,
+div,
+h1,
+h2,
+p,
+a,
+b,
+u,
+img,
+aside,
+footer,
+header,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: 16px;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: var(--max-width);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 20px;
+    margin-right: 1px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+h1 {
+    font-size: var(--step-h1); /* 48px a 64px*/
+    letter-spacing: -0.035em;
+}
+
+h2 {
+    font-size: var(--margin-24);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ******************* Components ****************** */
+
+/* ******************* Btn ****************** */
+
+.btn {
+    background-color: var(--main-color);
+    width: 13.5rem;
+    height: 4.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ******************* Site 404 ****************** */
+
+.header h2 {
+    color: var(--main-color);
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+}
+
+.container {
+    margin-top: 4rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 280px;
+    max-width: 539px;
+}
+
+.main h1 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: bold;
+    margin-top: 4.85rem;
+    margin-bottom: calc(var(--margin-24) * 1.25);
+    letter-spacing: -0.035em;
+}
+
+.main p {
+    color: var(--second-color);
+    font-family: var(--main-font);
+    font-size: var(--step-p); /* 18px a 24px */
+    font-weight: normal;
+    letter-spacing: -0.035em;
+    margin-right: var(--margin-24);
+    margin-bottom: calc(var(--margin-24) * 2.75);
+    width: 328px;
+}
+
+.btn a {
+    color: var(--white-color);
+    font-family: var(--main-font);
+    margin: 0;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.footer {
+    color: var(--footer-color);
+    font-family: var(--footer-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    margin-top: 7.125rem;
+    margin-left: 1.375rem;
+    margin-right: 2.56rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 80em) {
+    html {
+        min-height: 100vh;
+    }
+
+    body {
+        margin: 40px 119px 24px 77px;
+        grid-template-columns: repeat(2fr);
+        column-gap: 118px;
+        grid-template-areas:
+            "header       header"
+            "container   main"
+            "footer        footer";
+    }
+
+    .header {
+        grid-area: header;
+        margin-top: 2.5rem;
+    }
+
+    .container {
+        grid-area: container;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .main h1 {
+        letter-spacing: -0.035em;
+        margin-bottom: 2.25rem;
+    }
+
+    .main p {
+        margin-left: 0;
+        width: 381px;
+        line-height: 36px;
+        margin-bottom: 4rem;
+    }
+
+    .main button {
+        margin-left: 0;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
